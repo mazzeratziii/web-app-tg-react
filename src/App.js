@@ -5,9 +5,9 @@ function App() {
 
     useEffect(() => {
         tg.ready();
-    }, []);
-    const onClose = () => {
-        onClose()
+    }, [])
+    const onClose = ()=> {
+        tg.close()
     }
   return (
     <div className="App">
