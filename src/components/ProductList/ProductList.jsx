@@ -17,6 +17,7 @@ const products = [
 
 const getTotalPrice = (items = []) => {
     return items.reduce((acc, item) => {
+
         return acc += item.price
     }, 0)
 }
@@ -31,13 +32,7 @@ const ProductList = () => {
             totalPrice: getTotalPrice(addedItems),
             queryId,
         }
-        fetch('http://85.119.146.179:8000/web-data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        })
+
     }, [addedItems])
 
     useEffect(() => {
@@ -49,7 +44,7 @@ const ProductList = () => {
 
     const onAdd = (product) => {
         const alreadyAdded = addedItems.find(item => item.id === product.id);
-        let newItems = [];
+        let newItems;
 
         if(alreadyAdded) {
             newItems = addedItems.filter(item => item.id !== product.id);
