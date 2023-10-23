@@ -5,9 +5,9 @@ import {useTelegram} from "../../hooks/useTelegram";
 import {useCallback, useEffect} from "react";
 
 const products = [
-    {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цвета, прямые'},
+    {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цвета, прямые',img:"https://yandex.ru/images/search?pos=15&from=tabbar&img_url=https%3A%2F%2Fpix.bonprix.pl%2Fimgc%2F0%2F0%2F1%2F5%2F0%2F4%2F3%2F6%2F5%2F7%2F_960%2F15043657%2Fdzhinsy-stretch-classic-fit-straight-sinij.jpg&text=%D0%B4%D0%B6%D0%B8%D0%BD%D1%81%D1%8B&rpt=simage&lr=172"},
     {id: '2', title: 'Куртка', price: 12000, description: 'Зеленого цвета, теплая'},
-    {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синего цвета, прямые'},
+    {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синего цвета, прямые',img:"https://yandex.ru/images/search?pos=28&from=tabbar&img_url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHTB1zhEqSFXXXXbrapXXq6xXFXXX3%2FCWLSP-Rasgado-Cal-as-de-Brim-Das-Mulheres-Plus-Size-Do-Vintage-Casual-Holes-Ripped-Washed.jpg&text=%D0%B4%D0%B6%D0%B8%D0%BD%D1%81%D1%8B&rpt=simage&lr=172"},
     {id: '4', title: 'Куртка 8', price: 122, description: 'Зеленого цвета, теплая'},
     {id: '5', title: 'Джинсы 3', price: 5000, description: 'Синего цвета, прямые'},
     {id: '6', title: 'Куртка 7', price: 600, description: 'Зеленого цвета, теплая'},
