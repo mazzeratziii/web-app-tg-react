@@ -1,0 +1,58 @@
+[
+  {
+    "id" : "1",
+    "title" : "джинсы",
+    "price" : 5000,
+    "description" : "Синего цвета, прямые",
+    "img" :"1.jpg"
+  },
+  {
+    "id" : "2",
+    "title" : "Куртка",
+    "price" : 12000,
+    "description" : "Зеленого цвета, теплая",
+    "img" :"https://yandex.ru/images/search?pos=28&from=tabbar&img_url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHTB1zhEqSFXXXXbrapXXq6xXFXXX3%2FCWLSP-Rasgado-Cal-as-de-Brim-Das-Mulheres-Plus-Size-Do-Vintage-Casual-Holes-Ripped-Washed.jpg&text=%D0%B4%D0%B6%D0%B8%D0%BD%D1%81%D1%8B&rpt=simage&lr=172"
+  },
+  {
+    "id" : "3",
+    "title" : "Джинсы 2",
+    "price" : 5000,
+    "description" : "Синего цвета, прямые",
+    "img" :"3.jpg"
+  },
+  {
+    "id" : "4",
+    "title" : "Куртка 8",
+    "price" : 122,
+    "description" : "Зеленого цвета, теплая",
+    "img" :"4.jpg"
+  },
+  {
+    "id" : "5",
+    "title" : "Джинсы 3",
+    "price" : 5000,
+    "description" : "Синего цвета, прямые",
+    "img" :"5.jpg"
+  },
+  {
+    "id" : "6",
+    "title" : "Куртка 7",
+    "price" : 600,
+    "description" : "Зеленого цвета, теплая",
+    "img" :"6.jpg"
+  },
+  {
+    "id" : "7",
+    "title" : "Джинсы 4",
+    "price" : 5500,
+    "description" : "Синего цвета, прямые",
+    "img" :"7.jpg"
+  },
+  {
+    "description" : "Зеленого цвета, теплая",
+    "id" : "8",
+    "price" : 12000,
+    "title" : "Куртка 5",
+    "img" :"8.jpg"
+  }
+]
