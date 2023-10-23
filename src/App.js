@@ -7,11 +7,11 @@ import ProductList from "./components/ProductList/ProductList";
 import Form from "./components/Form/Form";
 
 function App() {
-    const {onToggleButton, tg} = useTelegram();
+    const {onToggleButton,tg} = useTelegram();
 
     useEffect(() => {
         tg.ready();
-    }, [onToggleButton])
+    }, [onToggleButton,tg])
 
     return (
         <div className="App">
