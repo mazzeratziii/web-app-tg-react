@@ -19,7 +19,7 @@ const products = [
 
 const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]);
-    const {tg, } = useTelegram();
+    const {tg} = useTelegram();
 
     const onSendData = useCallback(() => {
 
