@@ -57,14 +57,23 @@ const ProductList = () => {
             newItems = [...addedItems, product];
         }
 
+        let isShow = false;
+
         setAddedItems(newItems)
 
         if(newItems.length === 0) {
             tg.MainButton.hide();
         } else {
+            isShow = true
             tg.MainButton.show();
             tg.MainButton.setParams({
                 text: `Купить ${getTotalPrice(newItems)}`
+            });
+        }
+
+        if (isShow === true){
+            CustomEvent("", {
+
             })
         }
     }
@@ -83,3 +92,12 @@ const ProductList = () => {
 };
 
 export default ProductList;
+
+
+async function customFetch(url, options){
+    const response = await fetch(url,options)
+
+    if (response.ok){
+        const data = await response.json();
+    }
+}
