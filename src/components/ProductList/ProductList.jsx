@@ -14,7 +14,7 @@ const getTotalPrice = (items = []) => {
 
 const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]);
-    const { tg, queryId } = useTelegram();
+    const {tg, queryId} = useTelegram();
 
     const onSendData = useCallback(() => {
         const data = {
@@ -22,27 +22,27 @@ const ProductList = () => {
             totalPrice: getTotalPrice(addedItems),
             queryId,
         }
-        fetch('http://92.255.67.216:8080/web-data', {
+        fetch('http://85.119.146.179:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data)
         })
-    }, [addedItems, queryId])
+    }, [addedItems])
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
         return () => {
             tg.offEvent('mainButtonClicked', onSendData)
         }
-    }, [onSendData, tg])
+    }, [onSendData])
 
     const onAdd = (product) => {
         const alreadyAdded = addedItems.find(item => item.id === product.id);
         let newItems = [];
 
-        if (alreadyAdded) {
+        if(alreadyAdded) {
             newItems = addedItems.filter(item => item.id !== product.id);
         } else {
             newItems = [...addedItems, product];
@@ -50,7 +50,7 @@ const ProductList = () => {
 
         setAddedItems(newItems)
 
-        if (newItems.length === 0) {
+        if(newItems.length === 0) {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
@@ -62,9 +62,8 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
-            {productsData.map(item => (
+            {products.map(item => (
                 <ProductItem
-                    key={item.id}
                     product={item}
                     onAdd={onAdd}
                     className={'item'}
